@@ -2,7 +2,7 @@ p{
     word-break: break-all;
 }
 
-Testimonials {
+#Testimonials {
     background:
       /* top, transparent red, faked with gradient */
       linear-gradient(
@@ -10,7 +10,7 @@ Testimonials {
         rgba(255, 0, 0, 0.45)
       ),
       /* bottom, image */
-      url(image.jpg);
+      url("/images/Reagan1.jpg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -23,10 +23,21 @@ Testimonials {
       justify-content: space-between;
   }
 
+  .Rounded{
+      border-radius: 50%;
+  }
+
   .projects-container img{
       max-width: 400px;
       max-width: 100%;
       max-height: 300px;
       flex-grow: 1;
       object-fit: cover;
+  }
+
+  .testimonialCircle{
+      width: 15px;
+      aspect-ratio: 1 !important;
+      height: auto !important;
+      border-radius: 50% !important;
   }

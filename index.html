@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
         <link rel="stylesheet" href="./css/style.css">
     <title>Boostrap Portfolio</title>
 </head>
 <body style="background-color: rgb(13, 33, 84); color: aliceblue;"s>
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav aria-label="breadcrumb" class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="container-fluid">
           <a href="#" class="navbar-brand"> Navbar </a>
           <button class="navbar-toggler" type="button" data-bs-toggle = "collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label = "Toggle navigation">
@@ -19,29 +18,35 @@
             </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-                <div class="navitem">
-                    <a href="nav-link active" aria-current="page" href="#">Home</a>
-                    <a href="nav-link" href="#Skills">Skills</a>
-                    <a href="nav-link" href="#Projects">Projects</a>
-                    <a href="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> Disabled </a>
+                <div class="navbar-nav">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a class="nav-link" href="#Skills">Skills</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a class="nav-link" href="#Projects">Projects</a>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
     </div>
 </nav>
-<h1 class="text-center bg-gradient"> About</h1>
 
-<div class="container-fluid bg-dark">
-    <div class="row justify-content-sm-center-context-ms-center">
-        <div class="col-5">
+<div class="container-fluid p-3 bg-dark text-center">
+    <div class="row d-block d-sm-flex justify-content-sm-center-context-ms-center">
+        <div class="col-md-6">
                 <img src="./images/Reagan1.jpg" class="img-fluid" alt="ProffesionalPhoto" width="100%">
             </div>
-            <div class="col-6">
-                <h2>Hi there! I am Reagan Carolussen</h2>
+            <div class="col-md-6">
+                <h1 class="fs-1">Hi there! I am Reagan Carolussen</h1   >
                 <h3>Web-Developer</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae qui ratione magnam culpa est provident quibusdam, accusamus ipsa soluta in alias esse ipsam quam rerum minima! Pariatur nobis sequi necessitatibus.</p>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-5">
                         <p> Birthday </p>
                         <p> Phone </p>
                         <p> Email </p>
@@ -50,7 +55,15 @@
                         <p> Hobbies </p>
                         <button class="btn btn-large btn-info"> Download CV</button>
                     </div>
-                    <div class="col-6"> 
+                    <div class="col-md-1">
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                    </div>
+                    <div class="col-md-6"> 
                         <p> 03 June 2002</p>
                         <p> 123 456 7890 </p>
                         <p> kingreggie702@gmail.com </p>
@@ -66,23 +79,23 @@
 
     <section id="Skills">
 
-        <div class="container m-auto">
+        <div class="container vh-100">
         <h1 class="display-1 text-center"> Skills </h1>
         <div class="row">
             <div class="col-4">
-                HTML
+                <img src="./images/html-5-icon.png" width="100%">
                 <div class="progress">
                     <div class="progress-bar" style="width:95%" aria-valuenow="95" aria-valuemax="100" aria-valuemin="0"> 95% </div>
                 </div>
             </div>
             <div class="col-4">
-                CSS
+                <img src="./images/css-3-icon.png" width="100%">
                 <div class="progress">
                     <div class="progress-bar" style="width:75%" aria-valuenow="75" aria-valuemax="100" aria-valuemin="0" > 75% </div>
                 </div>
             </div>
             <div class="col-4">
-                JAVASCRIPT
+                <img src="./images/c.png" width="100%">
                 <div class="progress">
                     <div class="progress-bar" style="width:20%" aria-valuenow="20" aria-valuemax="100" aria-valuemin="0" > 20% </div>
                 </div>
@@ -93,45 +106,51 @@
     </section>
         
         <section id="Testimonials">
-            <div class="container">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner text-center">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/200" class="rounded-circle">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active testimonialCircle" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="testimonialCircle" ariai-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="testimonialCircle" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="https://picsum.photos/300/?random=1" class="d-block mx-auto Rounded" style="width: 35%;">
+                            <h5 class="">Heading 1</h5>
+                            <p>Content 1</p>
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/200" class="rounded-circle" >
+                    <div class="carousel-item text-center">
+                        <img src="https://picsum.photos/300/?random=2" class="d-block mx-auto Rounded" style="width: 35%;">
+                            <h5>Heading 2</h5>
+                            <p>Content 2</p>
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/200" class="rounded-circle" >
+                    <div class="carousel-item text-center">
+                        <img src="https://picsum.photos/300/?random=3" class="d-block mx-auto Rounded" style="width: 35%;" >
+                            <h5>Heading 3</h5>
+                            <p>Content 3</p>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
-
-        <section id="projects" class="py-5 text-center">
+        <section id="Projects" class="py-5 text-center">
             <div class="container">
                 <h2>Projects</h2>
                 <div class="projects-container">
                     <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="https://picsum.photos/600?random=1"/>
-                    <img src="https://picsum.photos/600/900?random=2"/>
-                    <img src="https://picsum.photos/600/800?random=3"/>
-                    <img src="https://picsum.photos/400/750?random=4"/>
-                    <img src="https://picsum.photos/400?random=5"/>
-                    <img src="https://picsum.photos/600?random=6"/>
-                    <img src="https://picsum.photos/700?random=7"/>
-                    <img src="https://picsum.photos/750/450?random=8"/>
-                    <img src="https://picsum.photos/600?random=9"/>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal2" src="https://picsum.photos/600/?random=2"/>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal3" src="https://picsum.photos/600/?random=3"/>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal4" src="https://picsum.photos/600/?random=4"/>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal5" src="https://picsum.photos/600/?random=5"/>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal6" src="https://picsum.photos/600/?random=6"/>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal7" src="https://picsum.photos/600/?random=7"/>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal8" src="https://picsum.photos/600/?random=8"/>
                 </div>
             </div>
 
+            <!-- Modals -->
+            <!-- Modal1 -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                 <div class="modal-dialog mw-100 p-5">
@@ -147,6 +166,268 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <img class="img-fluid" src="https://picsum.photos/600?random=1">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 1</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal2 -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 2
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=2">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 2</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, fugit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal3 -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 3
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=3">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 3</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate non ea aliquid dolore consequuntur.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal4 -->
+            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 4
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 4</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal5 -->
+            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 5
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=5">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 5</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?
+                                            Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Nesciunt debitis non aliquid mollitia reprehenderit!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal6 -->
+            <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 6
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=6">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 6</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odio laboriosam voluptatibus illum alias, numquam cumque voluptates, officiis commodi ut placeat ducimus praesentium quod, laborum dolorem magni iusto. Labore, quibusdam.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal7 -->
+            <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 7
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=7">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 7</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nobis ducimus impedit, dolor voluptatibus quis fugit dolore cumque laborum aliquam in velit repellendus, distinctio beatae quibusdam voluptate? Perferendis, rerum autem.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal8 -->
+            <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 8
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=8">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Project 8</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, veniam?
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam numquam dolor distinctio porro! Laborum corporis nemo sit aliquid illum nesciunt? Quis, libero. Iure perspiciatis perferendis iste similique doloribus inventore cum?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bt btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal9 -->
+            <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog mw-100 p-5">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLablel">
+                                Project 1
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img class="img-fluid" src="https://picsum.photos/600?random=9">
                                     </div>
                                     <div class="col-md-6">
                                         <h4>Project 1</h4>
